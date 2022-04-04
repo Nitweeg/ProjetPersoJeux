@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>World of Warcraft / Hearthstone</title>
+  <link href="../style/normalize.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="../Function/Api.js" charset="utf-8"></script>
+  <link href="../style/navbar.css" rel="stylesheet">
+  <script src="../Function/konami.js"></script>
+  <link href="../style/styleHearth.css" rel="stylesheet">
+</head>
+<body>
+  <h1>World of Warcraft & Hearthstone</h1>
+
+  <!-- Début De NavBar-->
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../image/BlizzardLogo.png" class="img-fluid" alt="Responsive image"></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Page/index.html">Blizzard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              World Of Warcraft
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="../Page/Mount.html">Monstre</a></li>
+              <li><a class="dropdown-item" href="../Page/Spell.html">Sort</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Hearthstone
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="../Page/Search_Card.html">Cartes</a></li>
+              <li><a class="dropdown-item" href="../Page/Back_Card.html">Dos Cartes</a></li>
+              <li><a class="dropdown-item" href="../Page/GalHearth.html">Galerie</a></li>
+              <li><a class="dropdown-item" href="../Page/Research.html">Rechercher une carte</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Page/API.html">Info API</a>
+          </li>
+        </ul>
+        <a class="nav-link active" aria-current="page" href="../Page/contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fin De NavBar-->
+
+  <div id="resulta"></div>
+  <script src="http://apitokenproject.000webhostapp.com/API/API.php"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', SearchCard());
+</script>
+</body>
+</html>

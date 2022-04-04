@@ -1,0 +1,20 @@
+.Index{
+    margin: 1%;
+}
+
+#accueil {
+    margin: 0 auto;
+    width: 50%;
+}
+
+#accueil img{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}

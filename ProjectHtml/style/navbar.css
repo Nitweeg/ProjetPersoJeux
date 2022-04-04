@@ -1,0 +1,37 @@
+@font-face {
+    font-family:"LifeCraft";
+    src: url("./LifeCraft_Font.ttf");
+}
+
+h1{
+    font-family: "LifeCraft",sans-serif;
+    background: -webkit-linear-gradient(left,rgb(255, 209, 58), rgb(26, 26, 26));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:350%;
+    text-align: center;
+}
+
+.img-fluid{
+    width: 10vw;
+};
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show > .nav-link {
+    color:red;
+}
+.nav-link.active, .nav-link.dropdown-toggle  {
+    font-size: 1.8vw;
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.nav-link.active {
+    color: white;
+}
+
+#but {
+    margin-left: 1%;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link href="../style/normalize.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link href="../style/navbar.css" rel="stylesheet">
+  <link href="../style/style.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="../Function/konami.js"></script>
+  <title>Contact</title>
+</head>
+
+<body>
+  <h1>World of Warcraft & Hearthstone</h1>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../image/BlizzardLogo.png" class="img-fluid"
+          alt="Responsive image"></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Page/index.html">Blizzard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              World Of Warcraft
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="../Page/Mount.html">Mount</a></li>
+              <li><a class="dropdown-item" href="../Page/Spell.html">Spell</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Hearthstone
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="../Page/Search_Card.html">Search Card</a></li>
+              <li><a class="dropdown-item" href="../Page/Back_Card.html">Search Back of Card</a></li>
+              <li><a class="dropdown-item" href="../Page/GalHearth.html">Photo Hearthstone</a></li>
+              <li><a class="dropdown-item" href="../Page/Research.html">Rechercher une carte</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../AccesTokenBlizzard/get_access_token.php">Token Gen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Page/API.html">Info API</a>
+          </li>
+        </ul>
+        <a class="nav-link active" aria-current="page" href="../Page/contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <div id="contact">
+      <h2>Contactez Moi</h2>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="../image/Contact.jpeg" style="width:100%">
+      </div>
+      <div class="column">
+        <form action="/action_page.php">
+          <label for="fname">Pseudo</label>
+          <input type="text" id="name" name="name" placeholder="Votre pseudo" required autofocus>
+          <label for="lname">Email</label>
+          <input type="text" id="email" name="email" placeholder="exemple@gmail.com" required>
+          <label for="subject">Text</label>
+          <textarea id="msg" name="msg" tabindex="5" classe="message" placeholder="Ecrivez votre message..."
+            required></textarea>
+          <button type="button" name="button" id="sending">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_ofoRC6RuTJyuK2nxeVpHK");
+    })();
+    document.getElementById("sending").onclick = function () {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let msg = document.getElementById("msg").value;
+      sending(name, email, msg);
+      success();
+    }
+
+    function sending(name, mail, msg) {
+      emailjs.send("service_fg5xpnv", "template_ooa6c5o", {
+        from_name: name,
+        to_name: mail,
+        message: msg,
+      });
+    }
+    function success(){
+      Swal.fire({
+        icon: "success",
+        title: "Bravo !",
+        text: "Message envoyé",
+      });
+    }
+  </script>
+</body>
+
+</html>
